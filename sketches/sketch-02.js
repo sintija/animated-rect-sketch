@@ -4,9 +4,14 @@ const settings = {
   dimensions: [1080, 1080]
 };
 
+//Converting radians to degrees
 const radToDeg = (degrees) => {
   return degrees / 180 * Math.PI;
+}
 
+//using random numbers for defining a scale 
+const randomRange = (min,max) => {
+return Math.random() *(max-min) + min;
 }
 
 
@@ -50,6 +55,7 @@ const sketch = () => {
       context.save()
       context.translate(x, y);
       context.rotate(-angle);
+      context.scale(randomRange(1,3),1);
       context.beginPath();
       context.rect(-w * 0.5, -h * 0.5, w, h);
       context.fill();

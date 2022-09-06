@@ -24,7 +24,6 @@ const sketch = () => {
     //offset used to be 16 which is around 2% of the canvas width
     const off = width * 0.02;
 
-
     for (let i = 0; i < 5; i++) {
       //nested loop for adding extra rows
       for (let j = 0; j < 5; j++) {
