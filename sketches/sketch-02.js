@@ -65,15 +65,12 @@ const sketch = () => {
       context.rect(-w * 0.5, random.range(0, -h * 0.5), w, h);
       context.fill();
       context.restore();
-
+      //Drawing the half arc 
       context.save(); 
       //Translate to the centre of the circle 
       context.translate(cx,cy);
       context.rotate(-angle);
-
       context.lineWidth  = random.range(5,20);
-
-    
       context.beginPath();
       //align the arc with the stroke by using negative starting angle and positive ending angle
       context.arc(0,0,radius * random.range(0.7, 1.3), slice * random.range(1, -8), slice * random.range(1, 5));
